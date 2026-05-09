@@ -21,6 +21,7 @@ Built with **Jetpack Compose + Kotlin**, this app focuses on common operations i
 - Course selection query and submission
 - Electronic certificate application and download
 - Personal information display, account management, and login status maintenance
+- Moodle homework query and management
 - In-app AI assistant access (displayed based on permissions)
 
 ---
@@ -71,7 +72,16 @@ Built with **Jetpack Compose + Kotlin**, this app focuses on common operations i
 - Save student ID and password for auto-login
 - Access to announcements, help, feedback, device ID, about, etc.
 
-### 8. AI Assistant
+### 8. Moodle Homework
+- Accessible from the schedule menu, displays assignments from the Moodle platform
+- Three view modes: "In Progress", "All", and "Overdue"
+- Tap an assignment to view details, scrollable for long content
+- Automatically logs into Moodle using your academic account, no need to re-enter credentials
+- Manual refresh to fetch the latest assignment data
+- View previously fetched assignment data even when offline
+- Shows data update time and caching information
+
+### 9. AI Assistant
 - Display based on developer authorization: Claude sonnet-4.6, Qwen, ChatGPT-5.4, etc.
 - Provide assistance tailored to campus scenarios
 - Separated from core academic functions to avoid interference
@@ -90,6 +100,7 @@ The app's main interface typically includes the following modules:
 - `Notifications`
 - `Files`
 - `Messages`
+- `Moodle Homework`
 - `Help`
 - `Feedback`
 - `Announcements`
@@ -230,8 +241,8 @@ This page only retains project description and release information. Source code 
 Current release version:
 
 - **App Name**: SCNU Academic Assistant
-- **Version**: `1.5`
-- **Version Code**: `6`
+- **Version**: `1.6`
+- **Version Code**: `7`
 - **Package Name**: `com.example.scnujwxt`
 
 To confirm the currently installed version, refer to the app's "About" page or the GitHub `Releases` page.
@@ -244,12 +255,6 @@ Each version typically includes:
 - Known limitations
 - Release date
 - Corresponding APK file name
-
----
-
-## TODO
-
-The testing and integration of some LiRuyun feature links have been completed, and the relevant logic code has basic functionality. We will continue to promote official integration into the App and continuously improve the experience based on actual usage feedback.
 
 ---
 
