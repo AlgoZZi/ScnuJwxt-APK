@@ -22,6 +22,8 @@ Built with **Jetpack Compose + Kotlin**, this app focuses on common operations i
 - Electronic certificate application and download
 - Personal information display, account management, and login status maintenance
 - Moodle homework query and management
+- Student evaluation functionality
+- Filtered course results query
 - In-app AI assistant access (displayed based on permissions)
 
 ---
@@ -42,6 +44,7 @@ Built with **Jetpack Compose + Kotlin**, this app focuses on common operations i
 - Support semester switching for historical grade inquiry
 - View detailed grade breakdown: attendance score, final exam score, comprehensive score, and percentages
 - Export grade table files
+- View second-type course grades (general electives, PE courses, etc.) with details including course category, affiliation, instructor, and hours
 
 ### 3. Electronic Certificates
 - Apply for electronic transcripts
@@ -81,10 +84,26 @@ Built with **Jetpack Compose + Kotlin**, this app focuses on common operations i
 - View previously fetched assignment data even when offline
 - Shows data update time and caching information
 
-### 9. AI Assistant
+### 9. Student Evaluation
+- View list of courses pending evaluation, with statistics for unevaluated, saved, and submitted
+- Support pagination for browsing evaluation courses
+- Enter evaluation form, select rating level for each item (Strongly Agree, Agree, Basically Agree, Disagree, Strongly Disagree)
+- Support one-click selection of "Strongly Agree" for all items
+- Support adding comments
+- Support saving drafts and submitting evaluations
+- Submitted evaluations can be viewed but not modified
+- Friendly prompt displayed when login expires
+
+### 10. AI Assistant
 - Display based on developer authorization: Claude sonnet-4.6, Qwen, ChatGPT-5.4, etc.
 - Provide assistance tailored to campus scenarios
 - Separated from core academic functions to avoid interference
+
+### 11. Filtered Course Results
+- Accessible from the schedule menu, view courses filtered out during course selection
+- Display basic information including course name and instructor name
+- Tap a course to view details: course code, instructor, class section, class time, location, teaching mode, selection time
+- Manual refresh to fetch latest data
 
 ---
 
@@ -101,6 +120,9 @@ The app's main interface typically includes the following modules:
 - `Files`
 - `Messages`
 - `Moodle Homework`
+- `Student Evaluation`
+- `Filtered Course Results`
+- `Second-Type Course Grades`
 - `Help`
 - `Feedback`
 - `Announcements`
@@ -241,8 +263,8 @@ This page only retains project description and release information. Source code 
 Current release version:
 
 - **App Name**: SCNU Academic Assistant
-- **Version**: `1.7`
-- **Version Code**: `8`
+- **Version**: `1.8`
+- **Version Code**: `9`
 - **Package Name**: `com.example.scnujwxt`
 
 To confirm the currently installed version, refer to the app's "About" page or the GitHub `Releases` page.
