@@ -1,4 +1,4 @@
-<p align="center"> <span style=" font-size:36px; font-weight:700; color:#000; text-shadow: 0 1px 1px #ccc, 0 2px 2px #bbb, 0 4px 4px #999, 0 6px 8px rgba(0,0,0,0.25); ">华师教务</span> </p>
+# 华师教务（ScnuJwxt）
 
 
 <p align="center">中文 | <a href="README_EN.md">English</a></p>
