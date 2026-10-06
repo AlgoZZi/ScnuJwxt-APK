@@ -2,7 +2,12 @@
 
 <p align="center"><a href="README.md">中文</a> | English</p>
 
-[![Android](https://img.shields.io/badge/Android-24%2B-brightgreen)](https://developer.android.com/) [![Kotlin](https://img.shields.io/badge/Kotlin-100%25-purple)](https://kotlinlang.org/) [![Compose](https://img.shields.io/badge/Jetpack%20Compose-UI-blue)](https://developer.android.com/jetpack/compose) [![License](https://img.shields.io/badge/License-Private-lightgrey)](LICENSE)
+<p align="center">
+<a href="https://developer.android.com/"><img src="https://img.shields.io/badge/Android-24%2B-brightgreen" alt="Android"></a>
+<a href="https://kotlinlang.org/"><img src="https://img.shields.io/badge/Kotlin-100%25-purple" alt="Kotlin"></a>
+<a href="https://developer.android.com/jetpack/compose"><img src="https://img.shields.io/badge/Jetpack%20Compose-UI-blue" alt="Compose"></a>
+<a href="LICENSE"><img src="https://img.shields.io/badge/License-Private-lightgrey" alt="License"></a>
+</p>
 
 **SCNU Academic Assistant** is an **unofficial** Android app designed for **current students of South China Normal University (SCNU)**. It aims to centralize access to class schedules, grades, exam arrangements, notifications, course selection information, and more into a mobile-friendly interface, with capabilities for data export, file download, and message viewing.
 
@@ -21,7 +26,6 @@ Built with **Jetpack Compose + Kotlin**, this app focuses on common operations i
 - Course selection query and submission
 - Electronic certificate application and download
 - Personal information display, account management, and login status maintenance
-- Moodle homework query and management
 - Student evaluation functionality
 - Filtered course results query
 - Academic progress query (curriculum plan and credit progress)
@@ -37,6 +41,7 @@ Built with **Jetpack Compose + Kotlin**, this app focuses on common operations i
 - Support left/right week switching
 - View course details including instructor, location, period, campus, credits, weeks, etc.
 - Schedule settings: start date, total weeks, class times, semester identification method, etc.
+- Course color scheme switching, with built-in presets including Default, Red, Pink, Orange, Yellow, Brown, White, Cyan, Green, Blue, Purple, Black, and Jade, to recolor course cards in one tap
 - Export current semester schedule as PDF
 - View university academic calendar
 
@@ -78,16 +83,7 @@ Built with **Jetpack Compose + Kotlin**, this app focuses on common operations i
 - Save student ID and password for auto-login
 - Access to announcements, help, feedback, device ID, about, etc.
 
-### 8. Moodle Homework
-- Accessible from the schedule menu, displays assignments from the Moodle platform
-- Three view modes: "In Progress", "All", and "Overdue"
-- Tap an assignment to view details, scrollable for long content
-- Automatically logs into Moodle using your academic account, no need to re-enter credentials
-- Manual refresh to fetch the latest assignment data
-- View previously fetched assignment data even when offline
-- Shows data update time and caching information
-
-### 9. Student Evaluation
+### 8. Student Evaluation
 - View list of courses pending evaluation, with statistics for unevaluated, saved, and submitted
 - Support pagination for browsing evaluation courses
 - Enter evaluation form, select rating level for each item (Strongly Agree, Agree, Basically Agree, Disagree, Strongly Disagree)
@@ -97,7 +93,7 @@ Built with **Jetpack Compose + Kotlin**, this app focuses on common operations i
 - Submitted evaluations can be viewed but not modified
 - Friendly prompt displayed when login expires
 
-### 10. AI Assistant
+### 9. AI Assistant
 - Multi-conversation management: create, switch, and delete conversation history (long-press to delete)
 - Conversations are persisted locally, sorted by most recent use, with titles auto-generated from the first message
 - Streaming output with a typewriter effect, and support for stopping generation midway
@@ -106,13 +102,13 @@ Built with **Jetpack Compose + Kotlin**, this app focuses on common operations i
 - Provide assistance tailored to campus scenarios
 - Separated from core academic functions to avoid interference
 
-### 11. Filtered Course Results
+### 10. Filtered Course Results
 - Accessible from the schedule menu, view courses filtered out during course selection
 - Display basic information including course name and instructor name
 - Tap a course to view details: course code, instructor, class section, class time, location, teaching mode, selection time
 - Manual refresh to fetch latest data
 
-### 12. Academic Progress Query
+### 11. Academic Progress Query
 - Accessible from the schedule menu, view personal academic progress and curriculum plan completion
 - Academic overview: GPA, planned total courses, passed/failed/unfinished/in-progress course counts, extra-plan passed and failed course counts, required/earned/remaining credits, and statistics time
 - Curriculum tree browsing: multi-level nodes support expand/collapse, with on-demand course list loading for leaf nodes
@@ -135,7 +131,6 @@ The app's main interface typically includes the following modules:
 - `Notifications`
 - `Files`
 - `Messages`
-- `Moodle Homework`
 - `Student Evaluation`
 - `Filtered Course Results`
 - `Academic Progress`
@@ -280,8 +275,8 @@ This page only retains project description and release information. Source code 
 Current release version:
 
 - **App Name**: SCNU Academic Assistant
-- **Version**: `2.1`
-- **Version Code**: `12`
+- **Version**: `2.2`
+- **Version Code**: `13`
 - **Package Name**: `com.example.scnujwxt`
 
 To confirm the currently installed version, refer to the app's "About" page or the GitHub `Releases` page.
