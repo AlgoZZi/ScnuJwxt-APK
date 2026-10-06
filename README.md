@@ -1,266 +1,261 @@
-# 华师教务（ScnuJwxt）
+<p align="center"> <span style=" font-size:36px; font-weight:700; color:#000; text-shadow: 0 1px 1px #ccc, 0 2px 2px #bbb, 0 4px 4px #999, 0 6px 8px rgba(0,0,0,0.25); ">SCNU Academic Assistant</span> </p>
 
-<p align="center">中文 | <a href="README_EN.md">English</a></p>
+<p align="center"><a href="README.md">中文</a> | English</p>
 
-[![Android](https://img.shields.io/badge/Android-24%2B-brightgreen)](https://developer.android.com/) [![Kotlin](https://img.shields.io/badge/Kotlin-100%25-purple)](https://kotlinlang.org/) [![Compose](https://img.shields.io/badge/Jetpack%20Compose-UI-blue)](https://developer.android.com/jetpack/compose) [![License](https://img.shields.io/badge/License-Private-lightgrey)](LICENSE)
+<p align="center">
+<a href="https://developer.android.com/"><img src="https://img.shields.io/badge/Android-24%2B-brightgreen" alt="Android"></a>
+<a href="https://kotlinlang.org/"><img src="https://img.shields.io/badge/Kotlin-100%25-purple" alt="Kotlin"></a>
+<a href="https://developer.android.com/jetpack/compose"><img src="https://img.shields.io/badge/Jetpack%20Compose-UI-blue" alt="Compose"></a>
+<a href="LICENSE"><img src="https://img.shields.io/badge/License-Private-lightgrey" alt="License"></a>
+</p>
 
-「华师教务」是一款面向 **华南师范大学（SCNU）在校学生** 的 Android **非官方** 教务辅助应用，致力于将课表、成绩、考试安排、通知公告、选课信息等集中到一个更适合移动端使用的入口中，并提供数据导出、文件下载、消息查看等常用能力。
+**SCNU Academic Assistant** is an **unofficial** Android app designed for **current students of South China Normal University (SCNU)**. It aims to centralize access to class schedules, grades, exam arrangements, notifications, course selection information, and more into a mobile-friendly interface, with capabilities for data export, file download, and message viewing.
 
-> 本项目主要服务于校内教务使用场景。使用前请确认你已具备合法访问学校教务系统的权限，并遵守学校相关规定。
-
----
-
-## 项目简介
-
-本应用以 **Jetpack Compose + Kotlin** 构建，聚焦华师教务系统常用操作场景，目标是提供一个轻量、清晰、适合移动端浏览与操作的入口。当前 GitHub 仓库仅用于发布 **APK 安装包**，不公开源码。应用支持：
-
-- 学生课表查询与周视图浏览
-- 成绩查询、成绩详情与导出
-- 考试安排查询与导出
-- 通知、文件与消息查看
-- 选课查询与提交
-- 电子证书申请与下载
-- 个人信息展示、账号管理与登录状态维护
-- 砺儒云作业查询与管理
-- 学生评价功能
-- 筛除结果查询
-- 学业情况查询（培养方案与学分进度）
-- 站内 AI 助手入口（按权限显示）
+> This application is primarily intended for academic use within the university. Before using, please ensure you have legal access to the university's academic system and comply with relevant university regulations.
 
 ---
 
-## 功能特性
+## Project Overview
 
-### 1. 课表
-- 周视图展示本学期课程安排
-- 自动定位当前周
-- 支持左右切换周次
-- 支持查看课程详情，包括教师、地点、节次、校区、学分、周次等
-- 支持课表设置：开学日期、总周数、上课时间、学期识别方式等
-- 支持导出当前学期 PDF 课表
-- 支持查看学校校历
+Built with **Jetpack Compose + Kotlin**, this app focuses on common operations in SCNU's academic system, aiming to provide a lightweight, clear, and mobile-friendly entry point. The current GitHub repository is only for publishing **APK installation packages**; source code is not publicly available. The app supports:
 
-### 2. 成绩
-- 展示所有已出分课程记录
-- 支持按学期切换查询历史成绩
-- 支持查看成绩细项，包括平时分、期末分、综合分及占比
-- 支持导出成绩表格文件
-- 支持查看第二类课程成绩（通识选修课、体育课等），含课程类别、归属、教师、学时等详细信息
-
-### 3. 电子证书
-- 支持电子成绩单申请
-- 支持电子证明申请
-- 可选择时间范围、语言版本等参数
-- 支持预览与下载 PDF
-
-### 4. 考试安排
-- 查看本学期及历史学期考试信息
-- 显示考试时间、地点、座位号、校区、学分等信息
-- 支持导出考试表格文件
-
-### 5. 选课
-- 查询开放期间可选课程
-- 按课程类型分类浏览（主修、通识选修、第二类课程、板块课等，动态识别）
-- 查看课程详情与容量信息
-- 提交选课请求
-- 查看已选课程列表
-- 收藏意向课程（复制课程信息，粘贴添加到收藏列表）
-- 课程收藏支持跨设备分享（复制粘贴格式）
-
-### 6. 通知、文件、消息
-- 查看教务通知公告
-- 查看教务系统下发文件
-- 查看站内消息，分为待阅与已阅
-- 部分内容支持附件下载
-
-### 7. 个人中心
-- 显示姓名、学号、学院、专业、班级
-- 保存学号与密码用于自动登录
-- 提供公告、帮助、反馈、设备码、关于等入口
-
-### 8. 砺儒云作业
-- 在课表菜单页进入，展示砺儒云平台的作业信息
-- 支持"进行中"、"所有"、"过期"三种视图切换
-- 点击作业条目可查看详情，内容过长时支持滑动浏览
-- 使用教务账号自动登录砺儒云，无需重复输入密码
-- 支持手动刷新获取最新作业数据
-- 离线状态下仍可查看已获取的历史作业数据
-- 显示数据更新时间及缓存提示
-
-### 9. 学生评价
-- 查看待评价课程列表，显示未评、保存、已提交统计
-- 支持分页浏览评价课程
-- 进入评价表单，逐项选择评分等级（完全同意、同意、基本同意、不同意、完全不同意）
-- 支持一键勾选"完全同意"
-- 支持填写评语
-- 支持保存草稿和提交评价
-- 已提交的评价可查看但不可修改
-- 登录失效时显示友好提示
-
-### 10. AI 助手
-- 支持多会话管理：新建、切换、删除历史会话（长按会话可删除）
-- 会话本地持久化，按最近使用时间排序，自动以首条消息生成会话标题
-- 流式输出，具备打字机呈现效果，支持中途停止生成
-- 支持 Markdown 富文本与 LaTeX 公式渲染
-- 助手名称由后台动态下发，按开发者授权显示
-- 结合学生校园使用场景提供辅助
-- 与教务业务功能分离，避免干扰主流程
-
-### 11. 筛除结果查询
-- 在课表菜单页进入，查看选课过程中被筛除的课程结果
-- 显示课程名称、教师姓名等基本信息
-- 点击课程可查看详情：课程号、教师、教学班、上课时间、教学地点、教学模式、选课时间
-- 支持手动刷新获取最新数据
-
-### 12. 学业情况查询
-- 在课表菜单页进入，查看个人学业进度与培养方案完成情况
-- 学业概览：GPA、计划总课程数、已通过/未通过/未修/在读课程数、计划外通过与未通过课程数、要求学分/已获得学分/未获得学分及统计时间
-- 培养方案树状浏览：支持多层级节点展开与收起，末级节点可按需加载课程列表
-- 学分完成状态以颜色区分（已满、超出、未满、节点未过），并展示要求门次与达标门次统计
-- 课程详情：课程号、课程名称、学分、修读状态、成绩、绩点、学期、学时、课程性质、补考/重修成绩、建议修读学年与学期、是否学位课、是否被课程替代
-- 修读状态区分：已修、在修、未修、未过、课程替代
-- 概览数据流式秒显，支持手动刷新获取最新数据
+- Student class schedule query and weekly view browsing
+- Grade inquiry, detailed grade viewing, and export
+- Exam schedule query and export
+- Notification, file, and message viewing
+- Course selection query and submission
+- Electronic certificate application and download
+- Personal information display, account management, and login status maintenance
+- Student evaluation functionality
+- Filtered course results query
+- Academic progress query (curriculum plan and credit progress)
+- In-app AI assistant access (displayed based on permissions)
 
 ---
 
-## 界面与模块
+## Features
 
-应用主界面通常包含以下模块：
+### 1. Class Schedule
+- Weekly view displaying current semester's course arrangements
+- Auto-locate current week
+- Support left/right week switching
+- View course details including instructor, location, period, campus, credits, weeks, etc.
+- Schedule settings: start date, total weeks, class times, semester identification method, etc.
+- Course color scheme switching, with built-in presets including Default, Red, Pink, Orange, Yellow, Brown, White, Cyan, Green, Blue, Purple, Black, and Jade, to recolor course cards in one tap
+- Export current semester schedule as PDF
+- View university academic calendar
 
-- `课表`
-- `成绩`
-- `考试`
-- `选课`
-- `个人中心`
-- `通知`
-- `文件`
-- `消息`
-- `砺儒云作业`
-- `学生评价`
-- `筛除结果查询`
-- `学业情况`
-- `第二类课成绩`
-- `帮助`
-- `反馈`
-- `公告`
-- `关于`
+### 2. Grades
+- Display all graded course records
+- Support semester switching for historical grade inquiry
+- View detailed grade breakdown: attendance score, final exam score, comprehensive score, and percentages
+- Export grade table files
+- View second-type course grades (general electives, PE courses, etc.) with details including course category, affiliation, instructor, and hours
 
-不同版本或授权状态下，部分功能可能不会默认显示。
+### 3. Electronic Certificates
+- Apply for electronic transcripts
+- Apply for electronic certificates
+- Select time range, language version, and other parameters
+- Preview and download PDF
 
----
+### 4. Exam Arrangements
+- View current and historical semester exam information
+- Display exam time, location, seat number, campus, credits, etc.
+- Export exam schedule files
 
-## 技术栈
+### 5. Course Selection
+- Query available courses during selection period
+- Browse by course type categories (Major, General Elective, Second-Type, Block courses, etc., dynamically identified)
+- View course details and capacity information
+- Submit course selection requests
+- View selected courses list
+- Favorite intended courses (copy course info, paste to add to favorites)
+- Course favorites support cross-device sharing (copy-paste format)
 
-- **语言**：Kotlin
-- **UI**：Jetpack Compose、Material 3
-- **架构**：ViewModel + Repository
-- **网络**：OkHttp、JSoup、Gson
-- **本地存储**：DataStore Preferences
-- **图片加载**：Coil
-- **富文本渲染**：Markwon
-- **测试**：JUnit、AndroidX Test、Compose UI Test
-- **构建工具**：Gradle Kotlin DSL
+### 6. Notifications, Files, Messages
+- View academic notifications and announcements
+- View files distributed by the academic system
+- View in-app messages, categorized as unread and read
+- Attachment download support for some content
 
----
+### 7. Personal Center
+- Display name, student ID, college, major, class
+- Save student ID and password for auto-login
+- Access to announcements, help, feedback, device ID, about, etc.
 
-## 运行环境
+### 8. Student Evaluation
+- View list of courses pending evaluation, with statistics for unevaluated, saved, and submitted
+- Support pagination for browsing evaluation courses
+- Enter evaluation form, select rating level for each item (Strongly Agree, Agree, Basically Agree, Disagree, Strongly Disagree)
+- Support one-click selection of "Strongly Agree" for all items
+- Support adding comments
+- Support saving drafts and submitting evaluations
+- Submitted evaluations can be viewed but not modified
+- Friendly prompt displayed when login expires
 
-- **最低 Android 版本**：API 24
-- **目标 Android 版本**：API 36
-- **编译版本**：API 36.1
-- **开发语言版本**：Java 11 / Kotlin
+### 9. AI Assistant
+- Multi-conversation management: create, switch, and delete conversation history (long-press to delete)
+- Conversations are persisted locally, sorted by most recent use, with titles auto-generated from the first message
+- Streaming output with a typewriter effect, and support for stopping generation midway
+- Markdown rich text and LaTeX formula rendering
+- Assistant name is delivered dynamically from the backend, displayed based on developer authorization
+- Provide assistance tailored to campus scenarios
+- Separated from core academic functions to avoid interference
 
-建议使用较新的 Android Studio 版本进行开发与调试。
+### 10. Filtered Course Results
+- Accessible from the schedule menu, view courses filtered out during course selection
+- Display basic information including course name and instructor name
+- Tap a course to view details: course code, instructor, class section, class time, location, teaching mode, selection time
+- Manual refresh to fetch latest data
 
----
-
-## 安装与运行
-
-### 直接安装发布版 APK
-
-1. 进入 GitHub 仓库的 `Releases` 页面
-2. 下载对应版本的 APK 文件
-3. 在 Android 设备上完成安装
-4. 首次安装如被系统拦截，请允许“安装未知应用”权限
-
-> 说明：由于本仓库暂未公开源码，普通用户只需下载 `Releases` 中的 APK 即可。
-
----
-
-## 配置说明
-
-### 1. 学期与课表设置
-
-首次使用课表相关功能时，建议检查：
-
-- 开学日期
-- 当前学期
-- 总周数
-- 每节课起止时间
-- 校区对应的上课时间规则
-
-如果你所在校区的作息时间与默认值不同，可以在设置中按实际情况调整。
-
-### 2. 登录信息
-
-应用可能需要你提供学号、密码或登录凭证，以访问教务相关数据。
-
-建议：
-
-- 确认账号密码正确
-- 仅在可信设备上保存登录状态
-- 账号变更后及时重新登录
-
-### 3. 导出与下载
-
-部分功能支持导出 PDF 或表格文件，通常需要：
-
-- 保持网络正常
-- 确保存储权限或系统文件访问能力可用
-- 确认本机有足够空间保存文件
+### 11. Academic Progress Query
+- Accessible from the schedule menu, view personal academic progress and curriculum plan completion
+- Academic overview: GPA, planned total courses, passed/failed/unfinished/in-progress course counts, extra-plan passed and failed course counts, required/earned/remaining credits, and statistics time
+- Curriculum tree browsing: multi-level nodes support expand/collapse, with on-demand course list loading for leaf nodes
+- Credit completion status color-coded (satisfied, exceeded, insufficient, node failed), with required and satisfied course-count statistics
+- Course details: course code, course name, credits, study status, grade, grade point, semester, hours, course type, makeup/retake grades, suggested study year and term, degree-required flag, and course replacement status
+- Study status categories: completed, in progress, not started, failed, replaced
+- Overview data streams for instant display, with manual refresh to fetch the latest data
 
 ---
 
-## 权限说明
+## Interface & Modules
 
-应用包含以下常见权限或能力：
+The app's main interface typically includes the following modules:
 
-- `INTERNET`：用于访问教务相关网络数据
-- `REQUEST_INSTALL_PACKAGES`：用于处理应用更新或安装包相关流程
-- `FileProvider`：用于安全分享或打开导出的文件
+- `Schedule`
+- `Grades`
+- `Exams`
+- `Course Selection`
+- `Personal Center`
+- `Notifications`
+- `Files`
+- `Messages`
+- `Student Evaluation`
+- `Filtered Course Results`
+- `Academic Progress`
+- `Second-Type Course Grades`
+- `Help`
+- `Feedback`
+- `Announcements`
+- `About`
 
-应用同时启用了文件保存、下载与内容分享相关能力，具体表现可能随 Android 版本而异。
-
----
-
-## 隐私与数据说明
-
-### 隐私保护
-
-本应用不存储用户教务密码，登录凭据仅用于与学校教务系统进行交互，尽力保障账号安全。
-
-### 数据采集
-
-仅采集必要的设备标识，用于前期内测以及正式发布后的资格验证与反馈追踪，无其他用途。
-
-### 数据来源
-
-课表、成绩、考试等所有数据均来自华南师范大学教务系统官方。应用所展示数据为登录时获取的缓存数据，如需查看最新信息，请刷新或重新登录。请勿将应用内数据作为考试、选课等重要事项的唯一依据，一切以教务系统官网为准。
+Some features may not be displayed by default depending on version or authorization status.
 
 ---
 
-## 发布说明
+## Tech Stack
 
-本仓库仅提供 APK 发布文件，适合直接下载安装使用。
-
-- 如需获取最新版，请前往 `Releases`
-- 如需查看历史版本，请在 `Releases` 页面选择对应标签
-- 若发现安装失败，请确认设备 Android 版本是否满足最低要求
-- 若系统提示风险安装，请确认 APK 来源为本仓库官方发布页
+- **Language**: Kotlin
+- **UI**: Jetpack Compose, Material 3
+- **Architecture**: ViewModel + Repository
+- **Network**: OkHttp, JSoup, Gson
+- **Local Storage**: DataStore Preferences
+- **Image Loading**: Coil
+- **Rich Text Rendering**: Markwon
+- **Testing**: JUnit, AndroidX Test, Compose UI Test
+- **Build Tool**: Gradle Kotlin DSL
 
 ---
 
-## 项目结构
+## Runtime Environment
+
+- **Minimum Android Version**: API 24
+- **Target Android Version**: API 36
+- **Compile Version**: API 36.1
+- **Development Language Version**: Java 11 / Kotlin
+
+It is recommended to use a newer version of Android Studio for development and debugging.
+
+---
+
+## Installation & Running
+
+### Install Release APK Directly
+
+1. Go to the `Releases` page of the GitHub repository
+2. Download the APK file for the corresponding version
+3. Complete installation on your Android device
+4. If blocked by the system during first installation, allow "Install unknown apps" permission
+
+> Note: Since the source code is not publicly available in this repository, regular users only need to download the APK from `Releases`.
+
+---
+
+## Configuration Notes
+
+### 1. Semester & Schedule Settings
+
+When using schedule-related features for the first time, it is recommended to check:
+
+- Start date of the semester
+- Current semester
+- Total number of weeks
+- Class start/end times
+- Campus-specific schedule rules
+
+If your campus has different schedule times from the default values, you can adjust them in the settings.
+
+### 2. Login Information
+
+The app may require you to provide student ID, password, or login credentials to access academic data.
+
+Recommendations:
+
+- Confirm your account password is correct
+- Only save login status on trusted devices
+- Re-login promptly after account changes
+
+### 3. Export & Download
+
+Some features support exporting PDF or table files, which typically require:
+
+- Stable network connection
+- Storage permission or system file access capability
+- Sufficient storage space on your device
+
+---
+
+## Permission Notes
+
+The app includes the following common permissions or capabilities:
+
+- `INTERNET`: Access academic-related network data
+- `REQUEST_INSTALL_PACKAGES`: Handle app updates or installation package processes
+- `FileProvider`: Securely share or open exported files
+
+The app also enables file saving, downloading, and content sharing capabilities, which may vary depending on the Android version.
+
+---
+
+## Privacy & Data Notes
+
+### Privacy Protection
+
+This app does not store user academic passwords. Login credentials are only used for interaction with the university's academic system to ensure account security.
+
+### Data Collection
+
+Only necessary device identifiers are collected for early beta testing and post-release qualification verification and feedback tracking. No other purposes.
+
+### Data Source
+
+All data including schedules, grades, and exams comes from the official SCNU academic system. Data displayed in the app is cached at login. To view the latest information, refresh or re-login. Do not use in-app data as the sole reference for important matters such as exams or course selection. Always refer to the official academic system website.
+
+---
+
+## Release Notes
+
+This repository only provides APK release files for direct download and installation.
+
+- For the latest version, go to `Releases`
+- For historical versions, select the corresponding tag on the `Releases` page
+- If installation fails, confirm your device's Android version meets the minimum requirements
+- If the system prompts a security warning, confirm the APK source is the official release page of this repository
+
+---
+
+## Project Structure
 
 ```text
 ScnuJwxt/
@@ -271,51 +266,50 @@ ScnuJwxt/
 └── README.md
 ```
 
-当前页面仅保留项目说明与发布信息，源码结构不在公开仓库中展示。
+This page only retains project description and release information. Source code structure is not displayed in the public repository.
 
 ---
 
-## 版本信息
+## Version Information
 
-当前发布版本信息如下：
+Current release version:
 
-- **应用名**：华师教务
-- **版本号**：`2.1`
-- **版本代码**：`12`
-- **包名**：`com.example.scnujwxt`
+- **App Name**: SCNU Academic Assistant
+- **Version**: `2.2`
+- **Version Code**: `13`
+- **Package Name**: `com.example.scnujwxt`
 
-如需确认当前安装的是哪个版本，请以应用“关于”页面或 GitHub `Releases` 页面中的说明为准。
+To confirm the currently installed version, refer to the app's "About" page or the GitHub `Releases` page.
 
-每个版本通常会包含以下内容：
+Each version typically includes:
 
-- 版本号
-- 更新内容
-- 修复的问题
-- 已知限制
-- 发布日期
-- 对应 APK 文件名
-
----
-
-## 服务与免责说明
-
-### 服务期限
-
-应用暂定开服一年。期间开发者将尽力维护应用稳定，及时进行版本更新与问题修复。
-
-### 免责声明
-
-本应用为非官方工具，仅供学习与便利使用，不承担官方教务服务职责。因教务系统变更、账号异常、网络问题、数据延迟、接口变更或用户操作不当导致的功能不可用、信息偏差等情况，开发者将尽力修复但不作任何保证。请勿将本应用用于任何违反学校规定的用途。
+- Version number
+- Update content
+- Fixed issues
+- Known limitations
+- Release date
+- Corresponding APK file name
 
 ---
 
-## 反馈与建议
+## Service & Disclaimer
 
-应用仍在持续优化中，欢迎各位同学在使用过程中，通过应用内 `我的-反馈` 功能提交问题与建议，助力开发者不断完善应用功能、提升使用体验。
+### Service Period
+
+The app is tentatively scheduled to operate for one year. During this period, the developer will strive to maintain app stability, perform timely version updates, and fix issues.
+
+### Disclaimer
+
+This application is an unofficial tool for learning and convenience purposes only, and does not assume official academic service responsibilities. The developer will make every effort to fix but does not guarantee against functional unavailability, information discrepancies, etc., caused by academic system changes, account abnormalities, network issues, data delays, interface changes, or user operation errors. Do not use this application for any purposes that violate university regulations.
 
 ---
 
-## 致谢
+## Feedback & Suggestions
 
-感谢所有参与内测、使用、测试、反馈及提出建议的同学！愿「华师教务」能为大家的学业生活提供便捷！
+The app is continuously being optimized. Students are welcome to submit issues and suggestions through the in-app `My - Feedback` feature to help the developer improve functionality and user experience.
 
+---
+
+## Acknowledgments
+
+Thanks to all students who participated in the beta testing, usage, testing, feedback, and suggestions! May **SCNU Academic Assistant** bring convenience to everyone's academic life!
