@@ -275,8 +275,8 @@ This page only retains project description and release information. Source code 
 Current release version:
 
 - **App Name**: SCNU Academic Assistant
-- **Version**: `2.2`
-- **Version Code**: `13`
+- **Version**: `2.3`
+- **Version Code**: `14`
 - **Package Name**: `com.example.scnujwxt`
 
 To confirm the currently installed version, refer to the app's "About" page or the GitHub `Releases` page.
