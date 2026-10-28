@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#faf9f6" />
+    <meta name="description" content="SCNU Academic is an unofficial Android companion for students at South China Normal University. View timetables, grades, exams, course selection, and academic progress on your phone." />
+    <meta property="og:title" content="SCNU Academic — Your everyday campus companion" />
+    <meta property="og:description" content="Timetables, grades, exams, and course selection. Everyday academic tasks in one handy Android app." />
+    <meta property="og:type" content="website" />
+    <title>SCNU Academic — Your everyday campus companion</title>
+    <link rel="icon" type="image/png" sizes="256x256" href="assets/favicon.png?v=2" />
+    <link rel="shortcut icon" href="assets/favicon.ico?v=2" />
+    <link rel="apple-touch-icon" href="assets/app-icon.png" />
+    <link rel="alternate" hreflang="zh-CN" href="index.html" />
+    <link rel="alternate" hreflang="en" href="en.html" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="site.js" defer></script>
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <canvas class="paper-grid" aria-hidden="true"></canvas>
+    <svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <symbol id="arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10" /></symbol>
+      <symbol id="download-icon" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 15v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4" /></symbol>
+      <symbol id="github-icon" viewBox="0 0 24 24"><path d="M9 21v-4c-4 1-4-2-6-2m12 6v-4a4 4 0 0 0-1-3c3 0 6-1 6-5a4 4 0 0 0-1-3c0-1 0-2-.5-3 0 0-1.5 0-3.5 1a12 12 0 0 0-6 0C7 3 5.5 3 5.5 3 5 4 5 5 5 6a4 4 0 0 0-1 3c0 4 3 5 6 5a4 4 0 0 0-1 3" /></symbol>
+      <symbol id="book-icon" viewBox="0 0 24 24"><path d="M12 5c-3-2-6-2-10-1v15c4-1 7-1 10 1 3-2 6-2 10-1V4c-4-1-7-1-10 1Zm0 0v15" /></symbol>
+      <symbol id="android-icon" viewBox="0 0 24 24"><path d="m7 6-2-3m12 3 2-3M4 12a8 8 0 0 1 16 0v6H4Zm4 6v3m8-3v3M1 12v5m22-5v5" /><path d="M8 9h.01M16 9h.01" /></symbol>
+      <symbol id="close-icon" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18" /></symbol>
+      <symbol id="expand-icon" viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5" /></symbol>
+    </svg>
+
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="SCNU Academic, back to top">
+        <img src="assets/app-icon.png" width="32" height="32" alt="" />
+        <span class="brand-name">SCNU Academic</span><span class="brand-short">SCNU</span>
+      </a>
+      <nav class="topnav" aria-label="Main navigation">
+        <a href="#features">Features</a>
+        <a href="#download">Download</a>
+        <a class="github-link" href="https://github.com/AlgoZZi/ScnuJwxt-APK" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg class="icon"><use href="#github-icon" /></svg><span class="github-label">GitHub</span><svg class="icon external"><use href="#arrow" /></svg>
+        </a>
+        <a class="language-link" href="index.html#top" lang="zh-CN" hreflang="zh-CN">中文</a>
+      </nav>
+    </header>
+
+    <div class="layout">
+      <aside class="contents" aria-label="Table of contents">
+        <a class="contents-title" href="#main">ON THIS PAGE</a>
+        <nav>
+          <a href="#why"><span>01</span>Why we made it</a>
+          <a href="#features"><span>02</span>Your timetable</a>
+          <a href="#grades"><span>03</span>Grades &amp; exams</a>
+          <a href="#academic"><span>04</span>Courses &amp; progress</a>
+          <a href="#campus"><span>05</span>Campus essentials</a>
+          <a href="#principles"><span>06</span>Before you start</a>
+          <a href="#download"><span>07</span>Get the Android app</a>
+          <a href="#faq"><span>08</span>Questions &amp; answers</a>
+        </nav>
+        <div class="contents-foot"><span class="status-dot"></span>Made for SCNU students</div>
+      </aside>
+
+      <main id="main" class="article">
+        <section class="hero" aria-labelledby="title">
+          <h1 id="title">SCNU Academic</h1>
+          <p class="subtitle">Timetables, grades, exams, and courses. All in one app.</p>
+          <div class="meta"><span>Android only</span><span>Android 7.0 or later</span><span>Unofficial academic companion</span></div>
+          <div class="actions">
+            <a class="button primary" href="https://github.com/AlgoZZi/ScnuJwxt-APK/releases/latest" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#android-icon" /></svg>Download for Android<svg class="icon"><use href="#download-icon" /></svg></a>
+            <a class="button secondary" href="#features">Explore the features<span aria-hidden="true">↓</span></a>
+          </div>
+          <p class="download-note">APK installer · Available from GitHub Releases</p>
+        </section>
+
+        <figure class="figure hero-figure">
+          <button class="image-button" type="button" data-image="assets/intro.webp" aria-label="Enlarge the SCNU Academic feature overview">
+            <img src="assets/intro.webp" alt="SCNU Academic overview: app launch screen and tools for timetables, grades, exams, and course selection" width="1600" height="900" fetchpriority="high" />
+            <span class="expand"><svg class="icon"><use href="#expand-icon" /></svg>View full image</span>
+          </button>
+          <figcaption><span>01 / 05</span>Everyday academic tools in one app. Screenshots show the app in Chinese.</figcaption>
+        </figure>
+
+        <section id="why" class="section">
+          <div class="section-label">01 — WHY WE MADE IT</div>
+          <h2>Everyday academic tasks.<br />Easier on your phone.</h2>
+          <p>Check your classroom before a lecture. Look up a grade when results arrive. Browse course details before registration. Small, everyday tasks deserve a more convenient home.</p>
+          <p>SCNU Academic (<span lang="zh-CN">华师教务</span>) is an unofficial Android companion for students at South China Normal University (SCNU). It brings timetables, grades, exam schedules, announcements, and course selection into a clearer, mobile-friendly interface.</p>
+          <p>Built with Kotlin, Jetpack Compose, and Material 3, it focuses on the academic tasks you actually need on campus.</p>
+          <div class="inline-note"><svg class="icon"><use href="#book-icon" /></svg><span>A convenient companion. Always confirm important details with the university's official academic system.</span></div>
+        </section>
+
+        <section id="features" class="section">
+          <div class="section-label">02 — TIMETABLE</div>
+          <h2>What's next?<br />One glance is enough.</h2>
+          <p>See your courses by week, with the current week selected automatically. Switch between weeks and open a class to check its teacher, location, periods, campus, credits, and teaching weeks.</p>
+          <ul class="feature-list">
+            <li><strong>Make it fit your term.</strong> Adjust the semester start date, total weeks, class times, and semester detection settings.</li>
+            <li><strong>A timetable in your colors.</strong> Switch between multiple built-in course color palettes to make your weekly schedule feel more personal.</li>
+            <li><strong>Take a copy with you.</strong> Export the current semester's timetable as a PDF and check the university calendar in the app.</li>
+          </ul>
+          <a class="text-link" href="#schedule-figure">See the timetable <span aria-hidden="true">↓</span></a>
+        </section>
+        <figure id="schedule-figure" class="figure">
+          <button class="image-button" type="button" data-image="assets/overview.webp" aria-label="Enlarge the profile, timetable, and color palette screenshots">
+            <img src="assets/overview.webp" alt="SCNU Academic screenshots: profile, weekly timetable, and course color palettes" width="1600" height="900" loading="lazy" decoding="async" />
+            <span class="expand"><svg class="icon"><use href="#expand-icon" /></svg>View full image</span>
+          </button>
+          <figcaption><span>02 / 05</span>Start with the timetable you check every day. Keep your week in view.</figcaption>
+        </figure>
+
+        <section id="grades" class="section">
+          <div class="section-label">03 — GRADES &amp; EXAMS</div>
+          <h2>More than a final score.<br />See the details.</h2>
+          <p>Browse past grades by semester. Open a result to see coursework marks, final-exam marks, the overall grade, and the weight of each component.</p>
+          <div class="feature-pair">
+            <div><h3>Your results, broken down</h3><p>View published results and second-category course grades, and export your grades as a spreadsheet. When you need official documents, apply for electronic transcripts and certificates, then preview and download the PDFs.</p></div>
+            <div><h3>Know your exam arrangements</h3><p>Check exam information for the current or a past semester, including time, room, seat number, and campus. Export the schedule as a spreadsheet for reference.</p></div>
+          </div>
+        </section>
+        <figure class="figure">
+          <button class="image-button" type="button" data-image="assets/grades-exams.webp" aria-label="Enlarge the grades, certificates, and exam screenshots">
+            <img src="assets/grades-exams.webp" alt="SCNU Academic screenshots: grade lists, grade breakdowns, electronic certificates, exam schedules, and exam details" width="1600" height="900" loading="lazy" decoding="async" />
+            <span class="expand"><svg class="icon"><use href="#expand-icon" /></svg>View full image</span>
+          </button>
+          <figcaption><span>03 / 05</span>From grade components to exam seats, the information you need stays together.</figcaption>
+        </figure>
+
+        <section id="academic" class="section">
+          <div class="section-label">04 — COURSES &amp; PROGRESS</div>
+          <h2>Choose this term's courses.<br />See the bigger picture.</h2>
+          <p>During registration, browse available courses by category, check details and capacity, submit a selection request, and confirm it in your selected-course list.</p>
+          <ul class="feature-list">
+            <li><strong>Save courses for later.</strong> Copy course information into your favorites. The same copy-and-paste format lets you share your saved courses across devices.</li>
+            <li><strong>Explore your degree plan.</strong> View an academic overview, credit progress, and your curriculum. Expand each module and load its course list when needed.</li>
+            <li><strong>Passed, in progress, or still to take.</strong> Check course status, grades, grade points, and credits, including failed and substituted courses.</li>
+            <li><strong>Check filtered-out selections.</strong> Look up courses removed during selection, including the class, teacher, meeting times, and location.</li>
+          </ul>
+        </section>
+        <figure class="figure">
+          <button class="image-button" type="button" data-image="assets/academic.webp" aria-label="Enlarge the degree plan and course selection screenshots">
+            <img src="assets/academic.webp" alt="SCNU Academic screenshots: academic overview, degree plan, course selection, general electives, and selected courses" width="1600" height="900" loading="lazy" decoding="async" />
+            <span class="expand"><svg class="icon"><use href="#expand-icon" /></svg>View full image</span>
+          </button>
+          <figcaption><span>04 / 05</span>Choose your next courses and understand your progress toward completing your studies.</figcaption>
+        </figure>
+
+        <section id="campus" class="section">
+          <div class="section-label">05 — CAMPUS ESSENTIALS</div>
+          <h2>Beyond your timetable.<br />The details of campus life.</h2>
+          <p>Read academic announcements, shared documents, and internal messages in one place. Messages are organized as unread or read, and some notices and documents include downloadable attachments.</p>
+          <div class="feature-pair">
+            <div><h3>Everyday tasks, together</h3><p>Check the calendar, manage your profile, and complete course evaluations. Add comments, save a draft, submit your evaluation, and review submissions.</p></div>
+            <div><h3>An AI assistant when needed</h3><p>Multiple conversations, streaming replies, Markdown, and mathematical notation are supported. The assistant is separate from academic workflows and is shown only with developer authorization.</p></div>
+          </div>
+        </section>
+        <figure class="figure">
+          <button class="image-button" type="button" data-image="assets/campus.webp" aria-label="Enlarge the announcements, files, messages, calendar, and AI assistant screenshots">
+            <img src="assets/campus.webp" alt="SCNU Academic screenshots: announcements, documents, messages, university calendar, and AI assistant" width="1600" height="900" loading="lazy" decoding="async" />
+            <span class="expand"><svg class="icon"><use href="#expand-icon" /></svg>View full image</span>
+          </button>
+          <figcaption><span>05 / 05</span>Bring scattered academic information into your everyday campus routine.</figcaption>
+        </figure>
+
+        <section id="principles" class="section">
+          <div class="section-label">06 — BEFORE YOU START</div>
+          <h2>A little more convenience.<br />A few important notes.</h2>
+          <p><strong>This is an unofficial tool.</strong> It does not act as an official university service. Use it for learning and convenience only, with legitimate access to the university's academic system, and follow university rules.</p>
+          <p>Timetables, grades, and exam information come from the university's academic system. Cached data may be out of date; refresh or sign in again for the latest information. Always confirm exams, course registration, and other important matters through official university sources.</p>
+          <p>The app includes eligibility verification and device-identifier-related functionality. Features can vary by version or authorization status. Read the repository documentation before use and sign in only on trusted devices.</p>
+          <a class="text-link" href="https://github.com/AlgoZZi/ScnuJwxt-APK#隐私与数据说明" target="_blank" rel="noopener noreferrer">Read the full project and privacy notes <svg class="icon"><use href="#arrow" /></svg></a>
+        </section>
+
+        <section id="download" class="section download-section">
+          <div class="section-label">07 — DOWNLOAD</div>
+          <img class="download-app-icon" src="assets/app-icon.png" width="72" height="72" alt="SCNU Academic app icon" loading="lazy" />
+          <h2>Next time you check,<br />try it on your phone.</h2>
+          <p>Made for students at South China Normal University.<br />Android APK only. Requires Android 7.0 or later.</p>
+          <div class="actions">
+            <a class="button primary" href="https://github.com/AlgoZZi/ScnuJwxt-APK/releases/latest" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#download-icon" /></svg>Get the APK<svg class="icon"><use href="#arrow" /></svg></a>
+            <a class="text-link" href="https://github.com/AlgoZZi/ScnuJwxt-APK/releases" target="_blank" rel="noopener noreferrer">Previous versions <span aria-hidden="true">↗</span></a>
+          </div>
+          <p class="download-note">On the release page, expand Assets and download the .apk file.</p>
+        </section>
+
+        <section id="faq" class="section faq">
+          <div class="section-label">08 — QUESTIONS &amp; ANSWERS</div>
+          <h2>A few things you might ask.</h2>
+          <details><summary>Is this an official university app?</summary><div><p>No. This is an unofficial academic companion for SCNU students, separate from any official university client. Refer to the official academic system and university announcements for all important matters.</p></div></details>
+          <details><summary>Can I install it on an iPhone or computer?</summary><div><p>Currently, only an Android APK is available, requiring Android 7.0 or later. There is no iOS or desktop version. This website introduces the app and links to its downloads; it cannot retrieve your academic records.</p></div></details>
+          <details><summary>How do I install the downloaded app?</summary><div><p>Download the release's .apk file from GitHub Releases and open it on your Android phone. If prompted, allow your browser or file manager to install unknown apps. Check that the installer comes from the AlgoZZi/ScnuJwxt-APK repository.</p></div></details>
+          <details><summary>Why are some features missing?</summary><div><p>Availability depends on the app version, the university's service windows, and authorization status. The AI assistant requires developer authorization, and course selection is available only during the university's registration periods.</p></div></details>
+          <details><summary>What if my data is out of date or something goes wrong?</summary><div><p>Try refreshing or signing in again, then check your account and network connection. If the issue continues, send feedback through the app's Profile → Feedback entry (<span lang="zh-CN">我的 → 反馈</span>).</p></div></details>
+          <details><summary>Is the app's source code on GitHub?</summary><div><p>The repository currently provides project documentation and APK releases, not the app's source code. Download the installer from Releases or read the README for full feature and usage information.</p></div></details>
+        </section>
+
+        <footer class="footer">
+          <a class="footer-brand" href="#main">SCNU Academic<span>Your everyday campus companion.</span></a>
+          <p>An unofficial academic companion · Made for SCNU students</p>
+          <div><a href="https://github.com/AlgoZZi/ScnuJwxt-APK" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a><a href="#main">Back to top ↑</a></div>
+        </footer>
+      </main>
+    </div>
+
+    <dialog class="lightbox" aria-label="Screenshot preview">
+      <div class="lightbox-toolbar"><span id="image-caption">Image preview</span><button type="button" class="close-lightbox" aria-label="Close image preview"><svg class="icon"><use href="#close-icon" /></svg></button></div>
+      <img class="lightbox-image" alt="" />
+      <p>Click outside the preview or press Esc to close</p>
+    </dialog>
+  </body>
+</html>
