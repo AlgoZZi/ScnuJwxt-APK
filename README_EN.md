@@ -9,6 +9,10 @@
 <a href="LICENSE"><img src="https://img.shields.io/badge/License-Private-lightgrey" alt="License"></a>
 </p>
 
+<p align="center">
+<a href="https://algozzi.github.io/ScnuJwxt-APK/en.html"><strong>Visit the Website · Features &amp; Screenshots</strong></a>
+</p>
+
 **SCNU Academic Assistant** is an **unofficial** Android app designed for **current students of South China Normal University (SCNU)**. It aims to centralize access to class schedules, grades, exam arrangements, notifications, course selection information, and more into a mobile-friendly interface, with capabilities for data export, file download, and message viewing.
 
 > This application is primarily intended for academic use within the university. Before using, please ensure you have legal access to the university's academic system and comply with relevant university regulations.
