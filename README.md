@@ -10,6 +10,10 @@
 <img src="https://img.shields.io/badge/License-Private-lightgrey" alt="License">
 </p>
 
+<p align="center">
+<a href="https://algozzi.github.io/ScnuJwxt-APK/"><strong>访问官网 · 功能介绍与界面预览</strong></a>
+</p>
+
 「华师教务」是一款面向 **华南师范大学（SCNU）在校学生** 的 Android **非官方** 教务辅助应用，致力于将课表、成绩、考试安排、通知公告、选课信息等集中到一个更适合移动端使用的入口中，并提供数据导出、文件下载、消息查看等常用能力。
 
 > 本项目主要服务于校内教务使用场景。使用前请确认你已具备合法访问学校教务系统的权限，并遵守学校相关规定。
