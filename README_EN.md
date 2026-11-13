@@ -3,25 +3,19 @@
 <p align="center"><a href="README.md">中文</a> | English</p>
 
 <p align="center">
-<a href="https://developer.android.com/"><img src="https://img.shields.io/badge/Android-24%2B-brightgreen" alt="Android"></a>
-<a href="https://kotlinlang.org/"><img src="https://img.shields.io/badge/Kotlin-100%25-purple" alt="Kotlin"></a>
-<a href="https://developer.android.com/jetpack/compose"><img src="https://img.shields.io/badge/Jetpack%20Compose-UI-blue" alt="Compose"></a>
+<a href="https://developer.android.com/"><img src="https://img.shields.io/badge/Android-7.0%2B-brightgreen" alt="Android"></a>
 <a href="LICENSE"><img src="https://img.shields.io/badge/License-Private-lightgrey" alt="License"></a>
-</p>
-
-<p align="center">
-<a href="https://algozzi.github.io/ScnuJwxt-APK/en.html"><strong>Visit the Website · Features &amp; Screenshots</strong></a>
 </p>
 
 **SCNU Academic Assistant** is an **unofficial** Android app designed for **current students of South China Normal University (SCNU)**. It aims to centralize access to class schedules, grades, exam arrangements, notifications, course selection information, and more into a mobile-friendly interface, with capabilities for data export, file download, and message viewing.
 
-> This application is primarily intended for academic use within the university. Before using, please ensure you have legal access to the university's academic system and comply with relevant university regulations.
+> This app is intended for everyday academic use at SCNU. Please follow university rules when using it.
 
 ---
 
 ## Project Overview
 
-Built with **Jetpack Compose + Kotlin**, this app focuses on common operations in SCNU's academic system, aiming to provide a lightweight, clear, and mobile-friendly entry point. The current GitHub repository is only for publishing **APK installation packages**; source code is not publicly available. The app supports:
+Check your schedule, grades, exams, and courses from your phone. The current GitHub repository is only for publishing **APK installation packages**; source code is not publicly available. Main features include:
 
 - Student class schedule query and weekly view browsing
 - Grade inquiry, detailed grade viewing, and export
@@ -33,143 +27,105 @@ Built with **Jetpack Compose + Kotlin**, this app focuses on common operations i
 - Student evaluation functionality
 - Filtered course results query
 - Academic progress query (curriculum plan and credit progress)
-- In-app AI assistant access (displayed based on permissions)
+- AI chat and conversation history
 
 ---
 
 ## Features
 
 ### 1. Class Schedule
-- Weekly view displaying current semester's course arrangements
-- Auto-locate current week
-- Support left/right week switching
-- View course details including instructor, location, period, campus, credits, weeks, etc.
-- Schedule settings: start date, total weeks, class times, semester identification method, etc.
-- Course color scheme switching, with built-in presets including Default, Red, Pink, Orange, Yellow, Brown, White, Cyan, Green, Blue, Purple, Black, and Jade, to recolor course cards in one tap
-- Export current semester schedule as PDF
-- View university academic calendar
+
+- View courses by week, jump to the current week, and swipe between weeks
+- Tap a course to see the instructor, room, class time, campus, credits, and more
+- Adjust the semester start date, number of weeks, and class times
+- Choose different course card colors
+- Export your schedule as a PDF and view the academic calendar
 
 ### 2. Grades
-- Display all graded course records
-- Support semester switching for historical grade inquiry
-- View detailed grade breakdown: attendance score, final exam score, comprehensive score, and percentages
-- Export grade table files
-- View second-type course grades (general electives, PE courses, etc.) with details including course category, affiliation, instructor, and hours
+
+- Check grades for the current and previous semesters
+- View coursework, final exam, and overall scores, including their weightings
+- Check second-type course grades and course information
+- Export a grade spreadsheet
 
 ### 3. Electronic Certificates
-- Apply for electronic transcripts
-- Apply for electronic certificates
-- Select time range, language version, and other parameters
-- Preview and download PDF
+
+- Apply for electronic transcripts and other certificates
+- Choose the time range, language, and other options
+- Preview and download PDFs
 
 ### 4. Exam Arrangements
-- View current and historical semester exam information
-- Display exam time, location, seat number, campus, credits, etc.
-- Export exam schedule files
+
+- Check current and previous semester exam schedules
+- View exam times, locations, seat numbers, and more
+- See exam countdowns and export an exam spreadsheet
 
 ### 5. Course Selection
-- Query available courses during selection period
-- Browse by course type categories (Major, General Elective, Second-Type, Block courses, etc., dynamically identified)
-- View course details and capacity information
-- Submit course selection requests
-- View selected courses list
-- Favorite intended courses (copy course info, paste to add to favorites)
-- Course favorites support cross-device sharing (copy-paste format)
 
-### 6. Notifications, Files, Messages
-- View academic notifications and announcements
-- View files distributed by the academic system
-- View in-app messages, categorized as unread and read
-- Attachment download support for some content
+- Browse available courses, course details, and remaining places during selection periods
+- Select courses, view your selections, and drop courses
+- Choose whether to confirm before selecting a course
 
-### 7. Personal Center
-- Display name, student ID, college, major, class
-- Save student ID and password for auto-login
-- Access to announcements, help, feedback, device ID, about, etc.
+### 6. Notifications, Files, and Messages
+
+- Read academic notices, files, and messages
+- Switch between unread and read messages
+- Open details and download attachments
+
+### 7. My
+
+- View your name, student ID, college, major, and class
+- Save login information and manage your account
+- Switch between Sky Blue & White and Solarized Light themes
+- Open announcements, help, feedback, and about
 
 ### 8. Student Evaluation
-- View list of courses pending evaluation, with statistics for unevaluated, saved, and submitted
-- Support pagination for browsing evaluation courses
-- Enter evaluation form, select rating level for each item (Strongly Agree, Agree, Basically Agree, Disagree, Strongly Disagree)
-- Support one-click selection of "Strongly Agree" for all items
-- Support adding comments
-- Support saving drafts and submitting evaluations
-- Submitted evaluations can be viewed but not modified
-- Friendly prompt displayed when login expires
+
+- View courses to evaluate and the numbers of unevaluated, saved, and submitted evaluations
+- Rate each item or select Strongly Agree for all items at once
+- Add comments, save a draft, or submit an evaluation
+- View evaluations you have already submitted
 
 ### 9. AI Assistant
-- Multi-conversation management: create, switch, and delete conversation history (long-press to delete)
-- Conversations are persisted locally, sorted by most recent use, with titles auto-generated from the first message
-- Streaming output with a typewriter effect, and support for stopping generation midway
-- Markdown rich text and LaTeX formula rendering
-- Assistant name is delivered dynamically from the backend, displayed based on developer authorization
-- Provide assistance tailored to campus scenarios
-- Separated from core academic functions to avoid interference
+
+- Send messages, read responses as they appear, and stop a response at any time
+- Create multiple conversations and view, switch, rename, or delete chat history
+- Long-press to copy a message and regenerate a response when needed
+- Retry a failed message and continue editing unsent text after switching conversations
+- Read tables, code, and mathematical formulas
 
 ### 10. Filtered Course Results
-- Accessible from the schedule menu, view courses filtered out during course selection
-- Display basic information including course name and instructor name
-- Tap a course to view details: course code, instructor, class section, class time, location, teaching mode, selection time
-- Manual refresh to fetch latest data
 
-### 11. Academic Progress Query
-- Accessible from the schedule menu, view personal academic progress and curriculum plan completion
-- Academic overview: GPA, planned total courses, passed/failed/unfinished/in-progress course counts, extra-plan passed and failed course counts, required/earned/remaining credits, and statistics time
-- Curriculum tree browsing: multi-level nodes support expand/collapse, with on-demand course list loading for leaf nodes
-- Credit completion status color-coded (satisfied, exceeded, insufficient, node failed), with required and satisfied course-count statistics
-- Course details: course code, course name, credits, study status, grade, grade point, semester, hours, course type, makeup/retake grades, suggested study year and term, degree-required flag, and course replacement status
-- Study status categories: completed, in progress, not started, failed, replaced
-- Overview data streams for instant display, with manual refresh to fetch the latest data
+- View courses filtered out during course selection
+- Tap to see the instructor, class section, time, location, and other details
+- Refresh to check the latest results
+
+### 11. Academic Progress
+
+- Check your GPA, course counts, and credit progress
+- Browse your curriculum plan and expand course requirements
+- View course grades, semesters, hours, and study status
+- Pull to refresh for the latest information
 
 ---
 
-## Interface & Modules
+## Where to Find Features
 
-The app's main interface typically includes the following modules:
+The bottom bar has five pages: **Schedule, Grades, Exams, Course Selection, and My**.
 
-- `Schedule`
-- `Grades`
-- `Exams`
-- `Course Selection`
-- `Personal Center`
-- `Notifications`
-- `Files`
-- `Messages`
-- `Student Evaluation`
-- `Filtered Course Results`
-- `Academic Progress`
-- `Second-Type Course Grades`
-- `Help`
-- `Feedback`
-- `Announcements`
-- `About`
+- **Schedule menu**: settings, export, academic calendar, notices, files, messages, student evaluation, filtered course results, and academic progress.
+- **Grades menu**: second-type course grades and electronic certificates.
+- **Course Selection tools**: preferences, course favorites, and scheduled course selection.
+- **My**: account, themes, announcements, AI assistant, help, feedback, and about.
 
-Some features may not be displayed by default depending on version or authorization status.
+Images in the academic calendar, announcements, feedback, and certificates can be viewed full screen. Double-tap or pinch to zoom; tap the image or black background to close.
 
 ---
 
-## Tech Stack
+## Requirements
 
-- **Language**: Kotlin
-- **UI**: Jetpack Compose, Material 3
-- **Architecture**: ViewModel + Repository
-- **Network**: OkHttp, JSoup, Gson
-- **Local Storage**: DataStore Preferences
-- **Image Loading**: Coil
-- **Rich Text Rendering**: Markwon
-- **Testing**: JUnit, AndroidX Test, Compose UI Test
-- **Build Tool**: Gradle Kotlin DSL
-
----
-
-## Runtime Environment
-
-- **Minimum Android Version**: API 24
-- **Target Android Version**: API 36
-- **Compile Version**: API 36.1
-- **Development Language Version**: Java 11 / Kotlin
-
-It is recommended to use a newer version of Android Studio for development and debugging.
+- Android 7.0 or later
+- A working internet connection for queries, login, and downloads
 
 ---
 
@@ -180,7 +136,7 @@ It is recommended to use a newer version of Android Studio for development and d
 1. Go to the `Releases` page of the GitHub repository
 2. Download the APK file for the corresponding version
 3. Complete installation on your Android device
-4. If blocked by the system during first installation, allow "Install unknown apps" permission
+4. Follow the instructions shown by Android to finish installation
 
 > Note: Since the source code is not publicly available in this repository, regular users only need to download the APK from `Releases`.
 
@@ -215,20 +171,7 @@ Recommendations:
 Some features support exporting PDF or table files, which typically require:
 
 - Stable network connection
-- Storage permission or system file access capability
 - Sufficient storage space on your device
-
----
-
-## Permission Notes
-
-The app includes the following common permissions or capabilities:
-
-- `INTERNET`: Access academic-related network data
-- `REQUEST_INSTALL_PACKAGES`: Handle app updates or installation package processes
-- `FileProvider`: Securely share or open exported files
-
-The app also enables file saving, downloading, and content sharing capabilities, which may vary depending on the Android version.
 
 ---
 
@@ -259,29 +202,14 @@ This repository only provides APK release files for direct download and installa
 
 ---
 
-## Project Structure
 
-```text
-ScnuJwxt/
-├── app/
-├── gradle/
-├── build.gradle.kts
-├── settings.gradle.kts
-└── README.md
-```
-
-This page only retains project description and release information. Source code structure is not displayed in the public repository.
-
----
 
 ## Version Information
 
-Current release version:
+App version described in this guide; check GitHub `Releases` for release availability:
 
 - **App Name**: SCNU Academic Assistant
-- **Version**: `2.3`
-- **Version Code**: `14`
-- **Package Name**: `com.example.scnujwxt`
+- **Version**: `3.0` (v3.0)
 
 To confirm the currently installed version, refer to the app's "About" page or the GitHub `Releases` page.
 
